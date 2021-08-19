@@ -8,10 +8,10 @@ const Hero = () => {
       <HeroContent>
         <HeroItems>
           <HeroH0>Hi, my name is</HeroH0>
-          <HeroH1>Junling Qu</HeroH1>
+          <HeroH1>Junling Qu.</HeroH1>
           <HeroP>
-            I'm an engineer with a passion for building accessible products and
-            solutions using code.
+            I'm an engineer with a passion for learning new technologies and
+            building practical solutions using code.
           </HeroP>
           <MailButton href="mailto:junling2@ualberta.ca">Contact Me</MailButton>
         </HeroItems>
@@ -59,6 +59,9 @@ const HeroItems = styled.div`
 
 const HeroH0 = styled.text`
   margin-bottom: 0.5rem;
+  font-family: "Style Script";
+  font-size: 2rem;
+  color: #d64161;
 `
 
 const HeroH1 = styled.h1`
@@ -71,14 +74,18 @@ const HeroP = styled.p`
   margin-bottom: 2rem;
   word-wrap: normal;
   max-width: 540px;
+  font-weight: 100;
+  font-size: 1.2rem;
+  color: #696969;
+  line-height: 1.5;
 `
 
 const MailButton = styled.a`
   background: transparent;
-  border: 2px ridge #ffffff;
+  border: 2px ridge white;
   white-space: nowrap;
   padding: 16px 40px;
-  color: #ffffff;
+  color: white;
   font-size: 20px;
   min-width: 100px;
   cursor: pointer;
