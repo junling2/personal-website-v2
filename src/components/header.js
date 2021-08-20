@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { GoThreeBars } from "react-icons/go"
@@ -95,6 +95,7 @@ const Bars = styled(GoThreeBars)`
   }
 `
 const NavMenu = styled.div`
+  margin-left: 3.5rem;
   display: flex;
   align-items: center;
 

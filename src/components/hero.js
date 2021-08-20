@@ -59,6 +59,7 @@ const HeroItems = styled.div`
 
 const HeroH0 = styled.text`
   margin-bottom: 0.5rem;
+  margin-left: 1rem;
   font-family: "Style Script";
   font-size: 2rem;
   color: #d64161;
@@ -66,12 +67,15 @@ const HeroH0 = styled.text`
 
 const HeroH1 = styled.h1`
   font-size: clamp(3rem, 6vw, 5rem);
+  font-family: "Raleway";
   margin-bottom: 1.5rem;
+  margin-left: 0.6rem;
   letter-spacing: 1px;
 `
 
 const HeroP = styled.p`
   margin-bottom: 2rem;
+  margin-left: 1rem;
   word-wrap: normal;
   max-width: 540px;
   font-weight: 100;
@@ -81,6 +85,7 @@ const HeroP = styled.p`
 `
 
 const MailButton = styled.a`
+  margin-left: 1rem;
   background: transparent;
   border: 2px ridge white;
   white-space: nowrap;
