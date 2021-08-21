@@ -2,12 +2,11 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const Button = styled(Link)`
-  background: transparent;
-  border: 2px ridge white;
-  white-space: nowrap;
-  padding: ${({ big }) => (big ? "16px 40px" : "10px 32px")};
-  color: #ffffff;
-  font-size: ${({ big }) => (big ? "20px" : "16px")};
+  border: 2px ridge #fff5ee;
+  align-items: center;
+  padding: ${({ big }) => (big ? "16px 40px" : "7px 15px")};
+  color: #fff5ee;
+  font-size: ${({ big }) => (big ? "20px" : "14px")};
   min-width: 100px;
   cursor: pointer;
   text-decoration: none;

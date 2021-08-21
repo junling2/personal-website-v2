@@ -30,7 +30,7 @@ const HeroContainer = styled.div`
   height: 100vh;
   padding: 0 1rem;
   position: relative;
-  margin-top: -80px;
+  margin-top: -55px;
 `
 
 const HeroContent = styled.div`
@@ -87,10 +87,10 @@ const HeroP = styled.p`
 const MailButton = styled.a`
   margin-left: 1rem;
   background: transparent;
-  border: 2px ridge white;
-  white-space: nowrap;
-  padding: 16px 40px;
-  color: white;
+  border: 2px ridge #fff5ee;
+  padding: 15px 25px;
+  text-align: center;
+  color: #fff5ee;
   font-size: 20px;
   min-width: 100px;
   cursor: pointer;

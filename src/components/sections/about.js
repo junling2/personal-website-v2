@@ -63,7 +63,7 @@ const About = () => {
 export default About
 
 const AboutContainer = styled.div`
-  background: white;
+  background: #fff5ee;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,9 +97,13 @@ const AboutItems = styled.div`
 `
 
 const AboutH1 = styled.h1`
+  font-family: "Raleway";
+  align-items: center;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
-  margin-left: 5rem;
+  font-weight: 900;
+  margin-top: 0.8rem;
+  margin-bottom: 1.3rem;
+  margin-left: 7rem;
   letter-spacing: 1px;
   max-height: 100%;
 `
@@ -118,11 +122,11 @@ const AboutColumns = styled.div`
 `
 
 const AboutP = styled.p`
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   word-wrap: normal;
   max-width: 440px;
   font-weight: 100;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #696969;
   line-height: 1.5;
 `
@@ -144,7 +148,8 @@ const SkillsList = styled.ul`
       content: "‣";
       position: absolute;
       left: 0;
-      color: brown;
+      margin-top: 0.2rem;
+      color: orangered;
       line-height: 12px;
     }
   }

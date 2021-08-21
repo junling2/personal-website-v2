@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { GoThreeBars } from "react-icons/go"
@@ -6,8 +6,23 @@ import { menuData } from "./data/menuData"
 import { Button } from "./button"
 
 const Header = () => {
+  const [navbar, setNavbar] = useState(false)
+
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+
+  window.addEventListener("scroll", changeBackground)
+
   return (
-    <Nav>
+    <Nav
+      background={navbar ? "rgba(105,105,105,0.9)" : "transparent"}
+      boxShadow={navbar ? "0px 6px 15px" : ""}
+    >
       <NavLogo to="/">JQ</NavLogo>
       <Bars />
       <NavMenu>
@@ -29,30 +44,32 @@ const Header = () => {
 export default Header
 
 const Nav = styled.nav`
-  background: transparent;
-  height: 80px;
+  background: ${props => props.background};
+  box-shadow: ${props => props.boxShadow};
+  transition: background-color 1s, box-shadow 1s;
+  height: 55px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0.5rem calc((100vw - 1300px) / 2);
   position: sticky;
+  top: 0;
   z-index: 100;
 `
 const NavLogo = styled(Link)`
-  color: #ffffff;
+  color: #fff5ee;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
-  margin-left: 1rem;
-  font-size: 2.2rem;
-  height: 100%;
+  margin-left: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
 `
 
 const NavLink = styled(Link)`
   position: relative;
-  font-size: 1.2rem;
-  color: #ffffff;
+  font-size: 1rem;
+  color: #fff5ee;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -65,11 +82,11 @@ const NavLink = styled(Link)`
   &::after {
     content: "";
     position: absolute;
-    bottom: 1rem;
     left: 0;
+    bottom: 0;
     width: 100%;
     height: 0.1em;
-    background-color: white;
+    background-color: #fff5ee;
     opacity: 1;
     transition: opacity 300ms, transform 300ms;
     transform: translate3d(-110%, 0, 0);
@@ -82,22 +99,23 @@ const NavLink = styled(Link)`
 `
 const Bars = styled(GoThreeBars)`
   display: none;
-  color: #ffffff;
+  color: #fff5ee;
 
   @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
+    display: flex;
+    margin-right: 1.4rem;
+    align-items: center;
     font-size: 1.8rem;
     cursor: pointer;
   }
 `
 const NavMenu = styled.div`
-  margin-left: 3.5rem;
   display: flex;
   align-items: center;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  height: 100%;
+  margin-left: 4rem;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -105,8 +123,6 @@ const NavMenu = styled.div`
 `
 
 const NavBtn = styled.nav`
-  display: flex;
-  align-items: center;
   margin-right: 24px;
 
   @media screen and (max-width: 768px) {
