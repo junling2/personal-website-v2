@@ -14,48 +14,42 @@ const About = () => {
 
   return (
     <AboutContainer>
-      <AboutContent>
-        <AboutItems>
-          <AboutH1>About Me</AboutH1>
-          <AboutColumns>
-            <div>
-              <AboutP>
-                Coming from an Electrical Engineering background, the
-                satisfaction of solving technical problems has led me to utilize
-                software development as a tool to create interesting, digital
-                solutions.
-              </AboutP>
-              <AboutP>
-                I've had the privilege of working in industries ranging from
-                Public Utilities to CyberSecurity. I have found that I enjoy
-                collaborating with other people and learning new things. I'm
-                always honing my technical skills through personal projects and
-                online resources.
-              </AboutP>
-              <AboutP>
-                Here are some languages and technologies I've been working with
-                recently:
-              </AboutP>
-              <SkillsList>
-                {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
-              </SkillsList>
-            </div>
-            <StyledPic>
-              <div className="container">
-                <StaticImage
-                  className="img"
-                  src="../../images/placeholder.jpg"
-                  width={500}
-                  quality={95}
-                  formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Headshot"
-                  placeholder="blurred"
-                />
-              </div>
-            </StyledPic>
-          </AboutColumns>
-        </AboutItems>
-      </AboutContent>
+      <AboutH1>About Me</AboutH1>
+      <AboutColumns>
+        <div>
+          <AboutP>
+            Coming from an Electrical Engineering background, the satisfaction
+            of solving technical problems has led me to utilize software
+            development as a tool to create interesting, digital solutions.
+          </AboutP>
+          <AboutP>
+            I've had the privilege of working in industries ranging from Public
+            Utilities to CyberSecurity. I have found that I enjoy collaborating
+            with other people and learning new things. I'm always honing my
+            technical skills through personal projects and online resources.
+          </AboutP>
+          <AboutP>
+            Here are some languages and technologies I've been working with
+            recently:
+          </AboutP>
+          <SkillsList>
+            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+          </SkillsList>
+        </div>
+        <StyledPic>
+          <div className="container">
+            <StaticImage
+              className="img"
+              src="../../images/placeholder.jpg"
+              width={500}
+              quality={95}
+              formats={["AUTO", "WEBP", "AVIF"]}
+              alt="Headshot"
+              placeholder="blurred"
+            />
+          </div>
+        </StyledPic>
+      </AboutColumns>
     </AboutContainer>
   )
 }
@@ -65,56 +59,27 @@ export default About
 const AboutContainer = styled.div`
   background: #fff5ee;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-  height: 100vh;
-`
-
-const AboutContent = styled.div`
-  z-index: 3;
-  height: calc(100vh - 80px);
-  max-height: 100%;
-  padding: 0rem calc((100vw - 1300px) / 2);
-  margin-top: 80px;
-
-  @media screen and (max-width: 768px) {
-    margin-left: 2rem;
-  }
-`
-
-const AboutItems = styled.div`
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  height: 100vh;
-  max-height: 100%;
-  padding: 0;
-  line-height: 1.1;
-  font-weight: bold;
+  align-items: center;
 `
 
 const AboutH1 = styled.h1`
-  font-family: "Raleway";
-  align-items: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 900;
-  margin-top: 0.8rem;
+  margin-top: 5rem;
   margin-bottom: 1.3rem;
-  margin-left: 7rem;
   letter-spacing: 1px;
-  max-height: 100%;
 `
 
 const AboutColumns = styled.div`
   display: grid;
+  align-items: center;
+  justify-content: center;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 6rem;
+  gap: 2rem;
   padding: 0 2rem;
-  max-height: 100%;
-  margin-left: 5rem;
+  margin-bottom: 3rem;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -122,11 +87,11 @@ const AboutColumns = styled.div`
 `
 
 const AboutP = styled.p`
+  font-family: "Quicksand", "Raleway";
   margin-bottom: 1rem;
   word-wrap: normal;
   max-width: 440px;
-  font-weight: 100;
-  font-size: 1.1rem;
+  font-weight: lighter;
   color: #696969;
   line-height: 1.5;
 `
@@ -141,6 +106,7 @@ const SkillsList = styled.ul`
   list-style: none;
   li {
     position: relative;
+    color: #1e90ff;
     margin-bottom: 10px;
     padding-left: 20px;
 
@@ -149,18 +115,17 @@ const SkillsList = styled.ul`
       position: absolute;
       left: 0;
       margin-top: 0.2rem;
-      color: orangered;
+      color: black;
       line-height: 12px;
     }
   }
 `
 
 const StyledPic = styled.div`
-  position: relative;
+  justify-self: center;
   max-width: 300px;
 
   @media screen and (max-width: 768px) {
-    margin: 50px auto 0;
     width: 70%;
   }
 

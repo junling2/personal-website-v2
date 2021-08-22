@@ -20,8 +20,9 @@ const Header = () => {
 
   return (
     <Nav
-      background={navbar ? "rgba(105,105,105,0.9)" : "transparent"}
+      background={navbar ? "rgba(105,105,105,0.7)" : "transparent"}
       boxShadow={navbar ? "0px 6px 15px" : ""}
+      backdrop={navbar ? "blur(8px)" : ""}
     >
       <NavLogo to="/">JQ</NavLogo>
       <Bars />
@@ -46,6 +47,7 @@ export default Header
 const Nav = styled.nav`
   background: ${props => props.background};
   box-shadow: ${props => props.boxShadow};
+  backdrop-filter: ${props => props.backdrop};
   transition: background-color 1s, box-shadow 1s;
   height: 55px;
   display: flex;
