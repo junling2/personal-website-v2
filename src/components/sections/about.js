@@ -13,30 +13,56 @@ const About = () => {
   ]
 
   return (
-    <AboutContainer>
-      <AboutH1>About Me</AboutH1>
+    <AboutContainer id="about">
+      <AboutH1
+        data-sal="slide-up"
+        data-sal-easing="ease"
+        data-sal-duration="600"
+      >
+        About Me
+      </AboutH1>
       <AboutColumns>
         <div>
-          <AboutP>
+          <AboutP
+            data-sal="slide-up"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
             Coming from an Electrical Engineering background, the satisfaction
             of solving technical problems has led me to utilize software
             development as a tool to create interesting, digital solutions.
           </AboutP>
-          <AboutP>
+          <AboutP
+            data-sal="slide-up"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
             I've had the privilege of working in industries ranging from Public
             Utilities to CyberSecurity. I have found that I enjoy collaborating
             with other people and learning new things. I'm always honing my
             technical skills through personal projects and online resources.
           </AboutP>
-          <AboutP>
+          <AboutP
+            data-sal="slide-up"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
             Here are some languages and technologies I've been working with
             recently:
           </AboutP>
-          <SkillsList>
+          <SkillsList
+            data-sal="slide-up"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
           </SkillsList>
         </div>
-        <StyledPic>
+        <StyledPic
+          data-sal="fade"
+          data-sal-easing="ease"
+          data-sal-duration="600"
+        >
           <div className="container">
             <StaticImage
               className="img"

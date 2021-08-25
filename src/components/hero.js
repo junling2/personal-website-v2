@@ -4,16 +4,39 @@ import titleImage from "../images/heroBg.png"
 
 const Hero = () => {
   return (
-    <HeroContainer>
+    <HeroContainer id="hero">
       <HeroContent>
         <HeroItems>
-          <HeroH0>Hi, my name is</HeroH0>
-          <HeroH1>Junling Qu.</HeroH1>
-          <HeroP>
+          <HeroH0
+            data-sal="slide-up"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
+            Hi, my name is
+          </HeroH0>
+          <HeroH1
+            data-sal="slide-up"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
+            Junling Qu.
+          </HeroH1>
+          <HeroP
+            data-sal="slide-up"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
             I'm an engineer with a passion for learning new technologies and
             building practical solutions using code.
           </HeroP>
-          <MailButton href="mailto:junling2@ualberta.ca">Contact Me</MailButton>
+          <MailButton
+            href="mailto:junling2@ualberta.ca"
+            data-sal="slide-up"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
+            Contact Me
+          </MailButton>
         </HeroItems>
       </HeroContent>
     </HeroContainer>

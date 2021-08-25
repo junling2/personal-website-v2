@@ -6,9 +6,17 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-anchor-links`,
+      options: {
+        offset: 0,
+        duration: 1000,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

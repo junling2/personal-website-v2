@@ -4,8 +4,14 @@ import { MdWork, MdSchool } from "react-icons/md"
 
 const Experience = () => {
   return (
-    <WorkContainer>
-      <WorkHeader>My Experiences</WorkHeader>
+    <WorkContainer id="experience">
+      <WorkHeader
+        data-sal="slide-up"
+        data-sal-easing="ease"
+        data-sal-duration="600"
+      >
+        My Experiences
+      </WorkHeader>
       <WorkTimeline>
         <Lines>
           <ShortLine />
@@ -19,7 +25,11 @@ const Experience = () => {
           <ShortLine />
         </Lines>
         <Entries>
-          <Entry>
+          <Entry
+            data-sal="slide-up"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
             <EntryTitle>Release QA Engineer @ Fortinet</EntryTitle>
             <EntryDate>Jul 2019 - Present</EntryDate>
             <EntryContent>
@@ -28,27 +38,43 @@ const Experience = () => {
               ajsfdnklsndfksanfakslnfdkalnfkanfklajnf.
             </EntryContent>
           </Entry>
-          <Entry>
-            <EntryTitle>Release QA Engineer @ Fortinet</EntryTitle>
-            <EntryDate>Jul 2019 - Present</EntryDate>
+          <Entry
+            data-sal="slide-up"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
+            <EntryTitle>
+              Network Engineer Co-op @ Telus Communications
+            </EntryTitle>
+            <EntryDate>Jan 2018 - Sep 2018</EntryDate>
             <EntryContent>
               did some stuff, kjauifhiawfnfiwnfinfisdnfjfn
               ajsnfsnfsndfkjnfjlskanfkjsanfjsf
               ajsfdnklsndfksanfakslnfdkalnfkanfklajnf.
             </EntryContent>
           </Entry>
-          <Entry>
-            <EntryTitle>Release QA Engineer @ Fortinet</EntryTitle>
-            <EntryDate>Jul 2019 - Present</EntryDate>
+          <Entry
+            data-sal="slide-up"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
+            <EntryTitle>Electrical Engineer Co-op @ BC Hydro</EntryTitle>
+            <EntryDate>Sep 2017 - Jan 2018</EntryDate>
             <EntryContent>
               did some stuff, kjauifhiawfnfiwnfinfisdnfjfn
               ajsnfsnfsndfkjnfjlskanfkjsanfjsf
               ajsfdnklsndfksanfakslnfdkalnfkanfklajnf.
             </EntryContent>
           </Entry>
-          <Entry>
-            <EntryTitle>Release QA Engineer @ Fortinet</EntryTitle>
-            <EntryDate>Jul 2019 - Present</EntryDate>
+          <Entry
+            data-sal="slide-up"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
+            <EntryTitle>
+              BSc. in Electrical Engineering @ University of Alberta
+            </EntryTitle>
+            <EntryDate>2014 - 2019</EntryDate>
             <EntryContent>
               did some stuff, kjauifhiawfnfiwnfinfisdnfjfn
               ajsnfsnfsndfkjnfjlskanfkjsanfjsf
@@ -96,13 +122,11 @@ const Lines = styled.div`
 const ShortLine = styled.div`
   background: #fff5ee;
   width: 4px;
-  border-radius: 2px;
-  height: 50px;
+  height: 40px;
 `
 const Line = styled.div`
   background: #fff5ee;
   width: 4px;
-  border-radius: 2px;
   height: 150px;
 `
 const Entries = styled.div`

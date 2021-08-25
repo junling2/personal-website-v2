@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import { GoThreeBars } from "react-icons/go"
 import { menuData } from "./data/menuData"
 import { Button } from "./button"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false)
@@ -24,16 +24,24 @@ const Header = () => {
       boxShadow={navbar ? "0px 6px 15px" : ""}
       backdrop={navbar ? "blur(8px)" : ""}
     >
-      <NavLogo to="/">JQ</NavLogo>
+      <NavLogo to="/#hero">JQ</NavLogo>
       <Bars />
-      <NavMenu>
+      <NavMenu
+        data-sal="slide-down"
+        data-sal-easing="ease"
+        data-sal-duration="1000"
+      >
         {menuData.map((menuItem, index) => (
           <NavLink to={menuItem.link} key={index}>
             {menuItem.title}
           </NavLink>
         ))}
       </NavMenu>
-      <NavBtn>
+      <NavBtn
+        data-sal="slide-left"
+        data-sal-easing="ease"
+        data-sal-duration="1000"
+      >
         <Button round="true" to="/resume.pdf">
           Résumé
         </Button>
@@ -58,7 +66,7 @@ const Nav = styled.nav`
   top: 0;
   z-index: 100;
 `
-const NavLogo = styled(Link)`
+const NavLogo = styled(AnchorLink)`
   color: #fff5ee;
   display: flex;
   align-items: center;
@@ -68,7 +76,7 @@ const NavLogo = styled(Link)`
   cursor: pointer;
 `
 
-const NavLink = styled(Link)`
+const NavLink = styled(AnchorLink)`
   position: relative;
   font-size: 1rem;
   color: #fff5ee;
