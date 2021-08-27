@@ -17,11 +17,21 @@ const Connect = () => {
         Feel free to reach out for any professional inquiries. Thanks!
       </ConnectP>
       <SocialLinks>
-        <GitHub />
-        <Instagram />
-        <Email />
-        <LinkedIn />
-        <Facebook />
+        <a href="https://github.com/junling2">
+          <GitHub />
+        </a>
+        <a href="https://www.instagram.com/junlingqu/">
+          <Instagram />
+        </a>
+        <a href="mailto:junling2@ualberta.ca">
+          <Email />
+        </a>
+        <a href="https://www.linkedin.com/in/junling2/">
+          <LinkedIn />
+        </a>
+        <a href="https://www.facebook.com/junling.qu">
+          <Facebook />
+        </a>
       </SocialLinks>
     </ConnectContainer>
   )
