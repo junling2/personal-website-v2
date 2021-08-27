@@ -13,29 +13,21 @@ const Experience = () => {
         My Experiences
       </WorkHeader>
       <WorkTimeline>
-        <Lines>
-          <ShortLine />
-          <WorkIcon />
-          <Line />
-          <WorkIcon />
-          <Line />
-          <WorkIcon />
-          <Line />
-          <SchoolIcon />
-          <ShortLine />
-        </Lines>
         <Entries>
           <Entry
             data-sal="slide-up"
             data-sal-easing="ease"
             data-sal-duration="600"
           >
-            <EntryTitle>Release QA Engineer @ Fortinet</EntryTitle>
+            <WorkIcon />
+            <EntryTitle>
+              Release QA Engineer <span>@ Fortinet</span>
+            </EntryTitle>
             <EntryDate>Jul 2019 - Present</EntryDate>
             <EntryContent>
-              did some stuff, kjauifhiawfnfiwnfinfisdnfjfn
-              ajsnfsnfsndfkjnfjlskanfkjsanfjsf
-              ajsfdnklsndfksanfakslnfdkalnfkanfklajnf.
+              Designed and implemented regression testing suites for SSL
+              encryption features of FortiOS firmware and provided debug info to
+              resolve customer issues.
             </EntryContent>
           </Entry>
           <Entry
@@ -43,14 +35,15 @@ const Experience = () => {
             data-sal-easing="ease"
             data-sal-duration="600"
           >
+            <WorkIcon />
             <EntryTitle>
-              Network Engineer Co-op @ Telus Communications
+              Network Engineer Co-op <span>@ Telus Communications</span>
             </EntryTitle>
             <EntryDate>Jan 2018 - Sep 2018</EntryDate>
             <EntryContent>
-              did some stuff, kjauifhiawfnfiwnfinfisdnfjfn
-              ajsnfsnfsndfkjnfjlskanfkjsanfjsf
-              ajsfdnklsndfksanfakslnfdkalnfkanfklajnf.
+              Assisted in creating network automation scripts and documented
+              best practices for utilizing third party applications to
+              orchestrate performance testing.
             </EntryContent>
           </Entry>
           <Entry
@@ -58,12 +51,15 @@ const Experience = () => {
             data-sal-easing="ease"
             data-sal-duration="600"
           >
-            <EntryTitle>Electrical Engineer Co-op @ BC Hydro</EntryTitle>
+            <WorkIcon />
+            <EntryTitle>
+              Electrical Engineer Co-op <span>@ BC Hydro</span>
+            </EntryTitle>
             <EntryDate>Sep 2017 - Jan 2018</EntryDate>
             <EntryContent>
-              did some stuff, kjauifhiawfnfiwnfinfisdnfjfn
-              ajsnfsnfsndfkjnfjlskanfkjsanfjsf
-              ajsfdnklsndfksanfakslnfdkalnfkanfklajnf.
+              Performed engineering safety analysis and evaluation of proposed
+              construction designs in close proximity to existing electrical
+              transmission systems.
             </EntryContent>
           </Entry>
           <Entry
@@ -71,14 +67,17 @@ const Experience = () => {
             data-sal-easing="ease"
             data-sal-duration="600"
           >
+            <SchoolIcon />
             <EntryTitle>
-              BSc. in Electrical Engineering @ University of Alberta
+              BSc. in Electrical Engineering{" "}
+              <span>@ University of Alberta</span>
             </EntryTitle>
             <EntryDate>2014 - 2019</EntryDate>
             <EntryContent>
-              did some stuff, kjauifhiawfnfiwnfinfisdnfjfn
-              ajsnfsnfsndfkjnfjlskanfkjsanfjsf
-              ajsfdnklsndfksanfakslnfdkalnfkanfklajnf.
+              5 year co-op program with selected courses in Embedded Systems,
+              Intelligent Systems, Data Communications, and Power Systems.
+              Capstone project incorporated a data communication system with a
+              flying drone to aid in early detection of forest fires in Alberta.
             </EntryContent>
           </Entry>
         </Entries>
@@ -100,9 +99,9 @@ const WorkContainer = styled.div`
 
 const WorkHeader = styled.h1`
   color: #fff5ee;
-  font-size: 3rem;
+  font-size: clamp(1rem, 6vw, 3rem);
   font-weight: 900;
-  margin-top: 6rem;
+  margin-top: 5rem;
   margin-bottom: 1.3rem;
   letter-spacing: 1px;
 `
@@ -111,51 +110,53 @@ const WorkTimeline = styled.div`
   margin-bottom: 3rem;
 `
 
-const Lines = styled.div`
-  background: purple;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
-
-const ShortLine = styled.div`
-  background: #fff5ee;
-  width: 4px;
-  height: 40px;
-`
-const Line = styled.div`
-  background: #fff5ee;
-  width: 4px;
-  height: 150px;
-`
 const Entries = styled.div`
-  background: red;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: #fff5ee;
+    color: #fff5ee;
+    width: 3px;
+    height: 125%;
+    border-radius: 2px;
+    transform: translateX(-30px) translateY(30px);
+
+    @media screen and (max-width: 627px) {
+      display: none;
+    }
+  }
 `
 const Entry = styled.div`
-  background: green;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  max-width: 600px;
-  margin-top: 2rem;
+  max-width: 500px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 `
 
 const EntryTitle = styled.h3`
   color: #1e90ff;
   margin-top: 1rem;
   margin-left: 1rem;
+
+  span {
+    color: #d64161;
+  }
 `
 const EntryDate = styled.h4`
   color: grey;
   margin-top: 0.5rem;
+  font-family: "Source Code Pro";
   margin-left: 1rem;
 `
 
 const EntryContent = styled.p`
-  color: grey;
+  color: #fff5ee;
   margin-left: 1rem;
   margin-top: 1rem;
   line-height: 1.5;
@@ -163,6 +164,8 @@ const EntryContent = styled.p`
 `
 
 const WorkIcon = styled(MdWork)`
+  position: absolute;
+  transform: translateX(-51px);
   color: #1e90ff;
   background: #fff5ee;
   height: 45px;
@@ -171,8 +174,14 @@ const WorkIcon = styled(MdWork)`
   line-height: 40px;
   border-radius: 50%;
   padding: 10px 10px;
+
+  @media screen and (max-width: 627px) {
+    display: none;
+  }
 `
 const SchoolIcon = styled(MdSchool)`
+  position: absolute;
+  transform: translateX(-51px);
   color: #1e90ff;
   background: #fff5ee;
   height: 45px;
@@ -181,4 +190,8 @@ const SchoolIcon = styled(MdSchool)`
   line-height: 40px;
   border-radius: 50%;
   padding: 10px 10px;
+
+  @media screen and (max-width: 627px) {
+    display: none;
+  }
 `

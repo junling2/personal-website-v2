@@ -91,7 +91,7 @@ const AboutContainer = styled.div`
 `
 
 const AboutH1 = styled.h1`
-  font-size: 3rem;
+  font-size: clamp(1rem, 6vw, 3rem);
   font-weight: 900;
   margin-top: 5rem;
   margin-bottom: 1.3rem;
@@ -133,6 +133,7 @@ const SkillsList = styled.ul`
   li {
     position: relative;
     color: #1e90ff;
+    font-family: "Source Code Pro";
     margin-bottom: 10px;
     padding-left: 20px;
 

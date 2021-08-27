@@ -20,7 +20,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Roboto`, `Style Script`, `Raleway`, `Quicksand`],
+        fonts: [
+          `Roboto`,
+          `Style Script`,
+          `Raleway`,
+          `Quicksand`,
+          `Source Code Pro`,
+        ],
         display: "swap",
       },
     },

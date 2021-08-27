@@ -21,7 +21,6 @@ const Header = () => {
   return (
     <Nav
       background={navbar ? "rgba(105,105,105,0.7)" : "transparent"}
-      boxShadow={navbar ? "0px 6px 15px" : ""}
       backdrop={navbar ? "blur(8px)" : ""}
     >
       <NavLogo to="/#hero">JQ</NavLogo>
@@ -54,7 +53,6 @@ export default Header
 
 const Nav = styled.nav`
   background: ${props => props.background};
-  box-shadow: ${props => props.boxShadow};
   backdrop-filter: ${props => props.backdrop};
   transition: background-color 1s, box-shadow 1s;
   height: 55px;
@@ -73,7 +71,11 @@ const NavLogo = styled(AnchorLink)`
   text-decoration: none;
   margin-left: 24px;
   font-size: 1.5rem;
-  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+    color: #1e90ff;
+  }
 `
 
 const NavLink = styled(AnchorLink)`
