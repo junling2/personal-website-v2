@@ -45,6 +45,6 @@ const Footer = styled.div`
 
 const FooterText = styled.h4`
   font-family: "Source Code Pro";
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 `
