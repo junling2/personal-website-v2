@@ -38,7 +38,7 @@ const Divider = styled.div`
 const Footer = styled.div`
   display: flex;
   width: 100%;
-  background: white;
+  background: #f5f5f5;
   justify-content: center;
   align-items: center;
 `

@@ -22,8 +22,10 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        difficulty
         slug
         title
+        topics
       }
     }
   }

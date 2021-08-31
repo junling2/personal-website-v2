@@ -17,20 +17,20 @@ const Connect = () => {
         Feel free to reach out for any professional inquiries. Thanks!
       </ConnectP>
       <SocialLinks>
-        <a href="https://github.com/junling2">
-          <GitHub />
-        </a>
-        <a href="https://www.instagram.com/junlingqu/">
-          <Instagram />
-        </a>
         <a href="mailto:junling2@ualberta.ca">
           <Email />
         </a>
         <a href="https://www.linkedin.com/in/junling2/">
           <LinkedIn />
         </a>
+        <a href="https://github.com/junling2">
+          <GitHub />
+        </a>
         <a href="https://www.facebook.com/junling.qu">
           <Facebook />
+        </a>
+        <a href="https://www.instagram.com/junlingqu/">
+          <Instagram />
         </a>
       </SocialLinks>
     </ConnectContainer>
@@ -125,8 +125,8 @@ const LinkedIn = styled(FiLinkedin)`
 const Facebook = styled(FiFacebook)`
   color: #f3cf7c;
   font-size: 4rem;
-  margin-left: 1rem;
-  margin-right: 2rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 
   &:hover {
     color: #1e90ff;
