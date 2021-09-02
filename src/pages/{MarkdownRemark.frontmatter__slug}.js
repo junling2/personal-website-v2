@@ -13,6 +13,7 @@ export default function Template({ data }) {
         <PostDate>{frontmatter.date}</PostDate>
         <PostContent dangerouslySetInnerHTML={{ __html: html }} />
       </Post>
+      <BackLink2 to="/blog">Return</BackLink2>
     </PostContainer>
   )
 }
@@ -57,6 +58,25 @@ const BackLink = styled(Link)`
     background: gainsboro;
   }
 `
+
+const BackLink2 = styled(Link)`
+  color: steelblue;
+  border-color: steelblue;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  &:hover {
+    background: gainsboro;
+  }
+`
+
 const PostTitle = styled.h1`
   font-weight: bolder;
   font-size: 2.5rem;
