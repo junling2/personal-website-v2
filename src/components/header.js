@@ -71,6 +71,7 @@ const NavLogo = styled(AnchorLink)`
   text-decoration: none;
   margin-left: 24px;
   font-size: 1.5rem;
+  transition: all 0.2s ease-in;
 
   &:hover {
     cursor: pointer;

@@ -17,21 +17,21 @@ const Connect = () => {
         Feel free to reach out for any professional inquiries. Thanks!
       </ConnectP>
       <SocialLinks>
-        <a href="mailto:junling2@ualberta.ca">
+        <Link href="mailto:junling2@ualberta.ca">
           <Email />
-        </a>
-        <a href="https://www.linkedin.com/in/junling2/">
+        </Link>
+        <Link href="https://www.linkedin.com/in/junling2/">
           <LinkedIn />
-        </a>
-        <a href="https://github.com/junling2">
+        </Link>
+        <Link href="https://github.com/junling2">
           <GitHub />
-        </a>
-        <a href="https://www.facebook.com/junling.qu">
+        </Link>
+        <Link href="https://www.facebook.com/junling.qu">
           <Facebook />
-        </a>
-        <a href="https://www.instagram.com/junlingqu/">
+        </Link>
+        <Link href="https://www.instagram.com/junlingqu/">
           <Instagram />
-        </a>
+        </Link>
       </SocialLinks>
     </ConnectContainer>
   )
@@ -73,64 +73,59 @@ const SocialLinks = styled.div`
     flex-direction: column;
   }
 `
+
+const Link = styled.a`
+  margin-left: 2rem;
+  margin-right: 2rem;
+`
 const GitHub = styled(FiGithub)`
   color: #f3cf7c;
   font-size: 4rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
   transition: ease-in;
+  transition: all 0.2s ease-in;
 
   &:hover {
     color: #1e90ff;
     transform: translateY(-5px);
-    cursor: pointer;
   }
 `
 const Instagram = styled(FiInstagram)`
   color: #f3cf7c;
   font-size: 4rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  transition: all 0.2s ease-in;
 
   &:hover {
     color: #1e90ff;
     transform: translateY(-5px);
-    cursor: pointer;
   }
 `
 const Email = styled(FiMail)`
   color: #f3cf7c;
   font-size: 4rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  transition: all 0.2s ease-in;
 
   &:hover {
     color: #1e90ff;
     transform: translateY(-5px);
-    cursor: pointer;
   }
 `
 const LinkedIn = styled(FiLinkedin)`
   color: #f3cf7c;
   font-size: 4rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  transition: all 0.2s ease-in;
 
   &:hover {
     color: #1e90ff;
     transform: translateY(-5px);
-    cursor: pointer;
   }
 `
 const Facebook = styled(FiFacebook)`
   color: #f3cf7c;
   font-size: 4rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  transition: all 0.2s ease-in;
 
   &:hover {
     color: #1e90ff;
     transform: translateY(-5px);
-    cursor: pointer;
   }
 `
