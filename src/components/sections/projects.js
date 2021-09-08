@@ -124,6 +124,7 @@ const FeaturedContent = styled.div`
 `
 const FeaturedH0 = styled.h4`
   margin-left: 1rem;
+  color: #1e90ff;
 `
 
 const ProjectTitle = styled.h1`
