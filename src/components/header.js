@@ -41,7 +41,7 @@ const Header = () => {
         data-sal-easing="ease"
         data-sal-duration="1000"
       >
-        <Button round="true" to="/resume.pdf">
+        <Button round="true" to="/resume">
           Résumé
         </Button>
       </NavBtn>

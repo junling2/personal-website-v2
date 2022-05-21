@@ -1,20 +1,39 @@
 import React from "react"
 import styled from "styled-components"
 import { FiFolder, FiGithub, FiExternalLink } from "react-icons/fi"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Projects = () => {
   return (
     <ProjectsContainer id="projects">
       <ProjectsHeader>Some Things I've Built</ProjectsHeader>
       <FeaturedProject>
-        <div></div>
+        <div>
+          <StyledPic
+            data-sal="fade"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
+            <div className="container">
+              <StaticImage
+                className="img"
+                src="../../images/benri.png"
+                width={500}
+                quality={95}
+                formats={["AUTO", "WEBP", "AVIF"]}
+                alt="Headshot"
+                placeholder="blurred"
+              />
+            </div>
+          </StyledPic>
+        </div>
         <FeaturedContent>
           <FeaturedH0>Featured Project</FeaturedH0>
           <ProjectTitle>BenriExpress</ProjectTitle>
           <ProjectP>Food delivery application</ProjectP>
           <ProjectTech>ReactNative Firebase</ProjectTech>
           <ProjectLinks>
-            <a href="https://github.com/junling2/BenriExpress">
+            <a href="https://github.com/junling2/BenriExpress" target="_blank">
               <GitLink />
             </a>
           </ProjectLinks>
@@ -27,12 +46,30 @@ const Projects = () => {
           <ProjectP>E-commerce website for soccer products</ProjectP>
           <ProjectTech>MongoDB Express React Node</ProjectTech>
           <ProjectLinks>
-            <a href="https://github.com/junling2/BarDown">
+            <a href="https://github.com/junling2/BarDown" target="_blank">
               <GitLink />
             </a>
           </ProjectLinks>
         </FeaturedContent>
-        <div></div>
+        <div>
+          <StyledPic
+            data-sal="fade"
+            data-sal-easing="ease"
+            data-sal-duration="600"
+          >
+            <div className="container">
+              <StaticImage
+                className="img"
+                src="../../images/bardown.png"
+                width={500}
+                quality={95}
+                formats={["AUTO", "WEBP", "AVIF"]}
+                alt="Headshot"
+                placeholder="blurred"
+              />
+            </div>
+          </StyledPic>
+        </div>
       </FeaturedProject>
       <OtherTitle>Other Projects</OtherTitle>
       <OtherProjects>
@@ -40,7 +77,7 @@ const Projects = () => {
           <OtherTop>
             <OtherIcon />
             <ProjectLinks>
-              <a href="https://github.com/junling2/Aery">
+              <a href="https://github.com/junling2/Aery" target="_blank">
                 <GitLink />
               </a>
             </ProjectLinks>
@@ -53,7 +90,10 @@ const Projects = () => {
           <OtherTop>
             <OtherIcon />
             <ProjectLinks>
-              <a href="https://github.com/junling2/AlgorithmicTrading">
+              <a
+                href="https://github.com/junling2/AlgorithmicTrading"
+                target="_blank"
+              >
                 <GitLink />
               </a>
             </ProjectLinks>
@@ -66,15 +106,16 @@ const Projects = () => {
           <OtherTop>
             <OtherIcon />
             <ProjectLinks>
-              <a href="https://github.com/junling2/travelAppTest">
+              <a
+                href="https://github.com/junling2/travelAppTest"
+                target="_blank"
+              >
                 <GitLink />
               </a>
             </ProjectLinks>
           </OtherTop>
           <ProjectTitle>Travel App Test</ProjectTitle>
-          <ProjectP>
-            Selenium TestNG framework for testing demo web application
-          </ProjectP>
+          <ProjectP>Selenium TestNG framework for demo web app</ProjectP>
           <ProjectTech>Selenium TestNG</ProjectTech>
         </ProjectCard>
       </OtherProjects>
@@ -210,4 +251,25 @@ const OtherIcon = styled(FiFolder)`
   font-size: 3rem;
   margin-left: 1rem;
   color: #1e90ff;
+`
+const StyledPic = styled.div`
+  justify-self: center;
+  max-width: 300px;
+
+  @media screen and (max-width: 768px) {
+    width: 70%;
+  }
+
+  .container {
+    display: block;
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+
+    .img {
+      position: relative;
+      border-radius: 10px;
+      mix-blend-mode: multiply;
+    }
+  }
 `

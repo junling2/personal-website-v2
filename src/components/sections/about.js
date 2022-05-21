@@ -4,9 +4,9 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const About = () => {
   const skills = [
-    "JavaScript",
-    "React Native",
     "Python",
+    "Selenium",
+    "JavaScript",
     "Django",
     "Java",
     "PostgreSQL",
