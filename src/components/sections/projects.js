@@ -14,7 +14,9 @@ const Projects = () => {
           <ProjectP>Food delivery application</ProjectP>
           <ProjectTech>ReactNative Firebase</ProjectTech>
           <ProjectLinks>
-            <GitLink />
+            <a href="https://github.com/junling2/BenriExpress">
+              <GitLink />
+            </a>
           </ProjectLinks>
         </FeaturedContent>
       </FeaturedProject>
@@ -25,7 +27,9 @@ const Projects = () => {
           <ProjectP>E-commerce website for soccer products</ProjectP>
           <ProjectTech>MongoDB Express React Node</ProjectTech>
           <ProjectLinks>
-            <GitLink />
+            <a href="https://github.com/junling2/BarDown">
+              <GitLink />
+            </a>
           </ProjectLinks>
         </FeaturedContent>
         <div></div>
@@ -36,7 +40,9 @@ const Projects = () => {
           <OtherTop>
             <OtherIcon />
             <ProjectLinks>
-              <GitLink />
+              <a href="https://github.com/junling2/Aery">
+                <GitLink />
+              </a>
             </ProjectLinks>
           </OtherTop>
           <ProjectTitle>Aery</ProjectTitle>
@@ -47,7 +53,9 @@ const Projects = () => {
           <OtherTop>
             <OtherIcon />
             <ProjectLinks>
-              <GitLink />
+              <a href="https://github.com/junling2/AlgorithmicTrading">
+                <GitLink />
+              </a>
             </ProjectLinks>
           </OtherTop>
           <ProjectTitle>AlgoTrading</ProjectTitle>
@@ -58,12 +66,16 @@ const Projects = () => {
           <OtherTop>
             <OtherIcon />
             <ProjectLinks>
-              <GitLink />
+              <a href="https://github.com/junling2/travelAppTest">
+                <GitLink />
+              </a>
             </ProjectLinks>
           </OtherTop>
-          <ProjectTitle>Other 1</ProjectTitle>
-          <ProjectP>hello my name is jeff, this is my project</ProjectP>
-          <ProjectTech>deez nutz</ProjectTech>
+          <ProjectTitle>Travel App Test</ProjectTitle>
+          <ProjectP>
+            Selenium TestNG framework for testing demo web application
+          </ProjectP>
+          <ProjectTech>Selenium TestNG</ProjectTech>
         </ProjectCard>
       </OtherProjects>
     </ProjectsContainer>

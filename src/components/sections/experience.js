@@ -21,13 +21,12 @@ const Experience = () => {
           >
             <WorkIcon />
             <EntryTitle>
-              Release QA Engineer <span>@ Fortinet</span>
+              Test Automation Engineer <span>@ Fortinet</span>
             </EntryTitle>
             <EntryDate>Jul 2019 - Present</EntryDate>
             <EntryContent>
-              Designed and implemented regression testing suites for SSL
-              encryption features of FortiOS firmware and provided debug info to
-              resolve customer issues.
+              Designed and implemented GUI testing framework for FortiClient
+              firewall application and security fabric devices.
             </EntryContent>
           </Entry>
           <Entry
