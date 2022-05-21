@@ -10,40 +10,25 @@ const Projects = () => {
         <div></div>
         <FeaturedContent>
           <FeaturedH0>Featured Project</FeaturedH0>
-          <ProjectTitle>Project 1</ProjectTitle>
-          <ProjectP>
-            this is a paragraph describing the project details
-          </ProjectP>
-          <ProjectTech>Next.js Django</ProjectTech>
-          <ProjectLinks></ProjectLinks>
+          <ProjectTitle>BenriExpress</ProjectTitle>
+          <ProjectP>Food delivery application</ProjectP>
+          <ProjectTech>ReactNative Firebase</ProjectTech>
+          <ProjectLinks>
+            <GitLink />
+          </ProjectLinks>
         </FeaturedContent>
       </FeaturedProject>
       <FeaturedProject>
         <FeaturedContent>
           <FeaturedH0>Featured Project</FeaturedH0>
-          <ProjectTitle>Project 1</ProjectTitle>
-          <ProjectP>
-            this is a paragraph describing the project details
-          </ProjectP>
-          <ProjectTech>Next.js Django</ProjectTech>
+          <ProjectTitle>Bar Down</ProjectTitle>
+          <ProjectP>E-commerce website for soccer products</ProjectP>
+          <ProjectTech>MongoDB Express React Node</ProjectTech>
           <ProjectLinks>
             <GitLink />
-            <ExtLink />
           </ProjectLinks>
         </FeaturedContent>
         <div></div>
-      </FeaturedProject>
-      <FeaturedProject>
-        <div></div>
-        <FeaturedContent>
-          <FeaturedH0>Featured Project</FeaturedH0>
-          <ProjectTitle>Project 1</ProjectTitle>
-          <ProjectP>
-            this is a paragraph describing the project details
-          </ProjectP>
-          <ProjectTech>Next.js Django</ProjectTech>
-          <ProjectLinks></ProjectLinks>
-        </FeaturedContent>
       </FeaturedProject>
       <OtherTitle>Other Projects</OtherTitle>
       <OtherProjects>
@@ -54,9 +39,9 @@ const Projects = () => {
               <GitLink />
             </ProjectLinks>
           </OtherTop>
-          <ProjectTitle>Other 1</ProjectTitle>
-          <ProjectP>hello my name is jeff, this is my project</ProjectP>
-          <ProjectTech>deez nutz</ProjectTech>
+          <ProjectTitle>Aery</ProjectTitle>
+          <ProjectP>App for displaying Air Quality Index information</ProjectP>
+          <ProjectTech>Android GoogleMapsAPI</ProjectTech>
         </ProjectCard>
         <ProjectCard>
           <OtherTop>
@@ -65,9 +50,9 @@ const Projects = () => {
               <GitLink />
             </ProjectLinks>
           </OtherTop>
-          <ProjectTitle>Other 1</ProjectTitle>
-          <ProjectP>hello my name is jeff, this is my project</ProjectP>
-          <ProjectTech>deez nutz</ProjectTech>
+          <ProjectTitle>AlgoTrading</ProjectTitle>
+          <ProjectP>Script to suggest stocks based on momentum</ProjectP>
+          <ProjectTech>Python IEXCloudAPI</ProjectTech>
         </ProjectCard>
         <ProjectCard>
           <OtherTop>
@@ -180,6 +165,9 @@ const OtherTitle = styled.h2`
 
 const OtherProjects = styled.div`
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 5rem;
 
   @media screen and (max-width: 768px) {
